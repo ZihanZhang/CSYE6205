@@ -1,0 +1,19 @@
+//============================================================================
+// Name        : DriverProject1.cpp
+// Author      : Zihan Zhang
+// Version     :
+// Copyright   : Your copyright notice
+// Description : Hello World in C++, Ansi-style
+//============================================================================
+
+#include <iostream>
+#include "Amazon.h"
+#include <vector>
+using namespace std;
+
+int main() {
+	cout << "Welcome to Amazon" << endl; // prints !!!Hello World!!!
+	edu::neu::csye6205::Amazon * amazon = new edu::neu::csye6205::Amazon();
+	vector
+	return 0;
+}

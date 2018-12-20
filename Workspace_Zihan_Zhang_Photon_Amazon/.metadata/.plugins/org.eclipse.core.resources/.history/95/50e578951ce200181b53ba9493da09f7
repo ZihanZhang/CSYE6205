@@ -1,0 +1,37 @@
+/*
+ * BaseItem.h
+ *
+ *  Created on: 2018年11月6日
+ *      Author: zihan
+ */
+
+#ifndef BASEITEM_H_
+#define BASEITEM_H_
+
+#include "AbstractItemAPI.h"
+
+namespace edu {
+namespace neu {
+namespace csye6205 {
+
+class BaseItem: AbstractItemAPI {
+public:
+	BaseItem();
+	virtual ~BaseItem();
+	AbstractItemAPI();
+	virtual ~AbstractItemAPI();
+
+	virtual void setName(const string) = 0;
+	virtual const string getName() const = 0;
+	virtual void setPrice(const double) = 0;
+	virtual const double getPrice() const = 0;
+	virtual const string info() const = 0;
+	virtual void show() const = 0;
+};
+
+}
+}
+}
+
+
+#endif /* BASEITEM_H_ */

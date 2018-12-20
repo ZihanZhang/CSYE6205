@@ -1,0 +1,44 @@
+/*
+ * BaseItem.cpp
+ *
+ *  Created on: 2018年11月6日
+ *      Author: zihan
+ */
+
+#include "BaseItem.h"
+
+namespace edu {
+namespace neu {
+namespace csye6205 {
+
+BaseItem::BaseItem() {
+	// TODO Auto-generated constructor stub
+
+}
+
+BaseItem::~BaseItem() {
+	// TODO Auto-generated destructor stub
+}
+
+virtual void BaseItem::setName(const string) {
+
+}
+virtual const string BaseItem::getName() {
+
+}
+virtual void BaseItem::setPrice(const double) {
+
+}
+virtual const double BaseItem::getPrice() {
+
+}
+virtual const string BaseItem::info() {
+
+}
+virtual void BaseItem::show() {
+
+}
+
+}
+}
+}

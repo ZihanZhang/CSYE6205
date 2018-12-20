@@ -1,0 +1,61 @@
+/*
+ * Amazon.cpp
+ *
+ *  Created on: 2018年11月6日
+ *      Author: zihan
+ */
+
+#include "Amazon.h"
+
+#include <cstring>
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <algorithm>
+
+namespace edu {
+namespace neu {
+namespace csye6205 {
+
+Amazon::Amazon() {
+	// TODO Auto-generated constructor stub
+
+}
+
+Amazon::~Amazon() {
+	// TODO Auto-generated destructor stub
+}
+
+void Amazon::loadEmployees(vector<string> csvData) {
+	for (string s: csvData) {
+		const char * delimiter = ",";
+		string lineBuffer = s;
+		std::vector<char> v(lineBuffer.begin(), lineBuffer.end());
+		int id = stoi(string(strtok(v.data(), delimiter)));
+		string firstname = string(strtok(NULL, delimiter));
+		string lastname = string(strtok(NULL, delimiter));
+		int age = stoi(string(strtok(NULL, delimiter)));
+		double wage = stod(string(strtok(NULL, delimiter)));
+
+		BaseEmployee * be = new BaseEmployee(id,firstname,lastname,age,wage);
+		this->employees.push_back(*be);
+	}
+}
+
+void Amazon::loadItems(vector<string> csvData) {
+	for (string s: csvData) {
+		const char * delimiter = ",";
+		string lineBuffer = s;
+		std::vector<char> v(lineBuffer.begin(), lineBuffer.end());
+		int id = stoi(string(strtok(v.data(), delimiter)));
+		string name = string(strtok(NULL, delimiter));
+		double price = stod(string(strtok(NULL, delimiter)));
+
+		BaseItem * bi = new BaseItem(id,name,price);
+		this->items.push_back(*bi);
+	}
+}
+
+} /* namespace csye6205 */
+} /* namespace neu */
+} /* namespace edu */

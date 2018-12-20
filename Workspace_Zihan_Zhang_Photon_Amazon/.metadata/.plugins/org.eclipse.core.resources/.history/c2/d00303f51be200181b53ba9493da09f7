@@ -1,0 +1,18 @@
+/*
+ * BaseItem.cpp
+ *
+ *  Created on: 2018年11月6日
+ *      Author: zihan
+ */
+
+#include "BaseItem.h"
+
+BaseItem::BaseItem() {
+	// TODO Auto-generated constructor stub
+
+}
+
+BaseItem::~BaseItem() {
+	// TODO Auto-generated destructor stub
+}
+

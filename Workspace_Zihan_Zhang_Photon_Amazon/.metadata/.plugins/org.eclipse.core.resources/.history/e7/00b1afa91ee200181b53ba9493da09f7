@@ -1,0 +1,27 @@
+/*
+ * BasePerson.h
+ *
+ *  Created on: 2018年11月6日
+ *      Author: zihan
+ */
+
+#ifndef BASEPERSON_H_
+#define BASEPERSON_H_
+
+#include "AbstractPersonAPI.h"
+
+namespace edu {
+namespace neu {
+namespace csye6205 {
+
+class BasePerson: public AbstractPersonAPI {
+public:
+	BasePerson();
+	virtual ~BasePerson();
+};
+
+} /* namespace csye6205 */
+} /* namespace neu */
+} /* namespace edu */
+
+#endif /* BASEPERSON_H_ */

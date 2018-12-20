@@ -1,0 +1,38 @@
+/*
+ * BaseEmployee.h
+ *
+ *  Created on: 2018年11月6日
+ *      Author: zihan
+ */
+
+#ifndef BASEEMPLOYEE_H_
+#define BASEEMPLOYEE_H_
+
+#include "BasePerson.h"
+
+namespace edu {
+namespace neu {
+namespace csye6205 {
+
+class BaseEmployee: public BasePerson {
+public:
+	int ID;
+	string FirstName;
+	string LastName;
+	int Age;
+	double Wage;
+	string information;
+	BaseEmployee();
+	BaseEmployee(int id, string firstname, string lastname, int age, double wage);
+
+	virtual const string info();
+	virtual void show();
+
+	virtual ~BaseEmployee();
+};
+
+} /* namespace csye6205 */
+} /* namespace neu */
+} /* namespace edu */
+
+#endif /* BASEEMPLOYEE_H_ */

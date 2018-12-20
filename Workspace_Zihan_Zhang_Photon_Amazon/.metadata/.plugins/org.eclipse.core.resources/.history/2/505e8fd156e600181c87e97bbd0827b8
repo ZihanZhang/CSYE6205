@@ -1,0 +1,50 @@
+//============================================================================
+// Name        : DriverProject1.cpp
+// Author      : Zihan Zhang
+// Version     :
+// Copyright   : Your copyright notice
+// Description : Hello World in C++, Ansi-style
+//============================================================================
+
+#include <iostream>
+#include "Amazon.h"
+#include <vector>
+using namespace std;
+
+int main() {
+	cout << "Welcome to Amazon" << endl;
+	edu::neu::csye6205::Amazon * amazon = new edu::neu::csye6205::Amazon();
+	vector<string> vec;
+	vec.push_back("1,James,Monroe,43,25.45,end");
+	vec.push_back("2,George,Washington,79,13.95,end");
+	vec.push_back("3,Dave,Smith,14,62.25,end");
+	vec.push_back("4,Harry,James,15,62.25,end");
+	vector<string> itemvec;
+	itemvec.push_back("1,iPhone,999.99,end");
+	itemvec.push_back("2,macBook,2599.99,end");
+	itemvec.push_back("3,iPad,62.25,end");
+	itemvec.push_back("4,iWatch,249.25,end");
+	amazon->loadEmployees(vec);
+	amazon->loadItems(itemvec);
+	amazon->showEmployees();
+	amazon->showItems();
+	cout<<""<<endl;
+	cout << "***Items Sorted:***" << endl;
+	amazon->sortItems();
+	amazon->showItems();
+	cout<<""<<endl;
+	cout << "***Items Double Price Sorted:***";
+	amazon->scaleItems(0, 2);
+	amazon->showItems();
+	cout<<""<<endl;
+	cout << "***Employee Sorted:***" <<endl;
+	amazon->sortEmployees();
+	amazon->showEmployees();
+	cout<<""<<end;
+	cout<<"***Employee Raise Wage Sorted:***" << endl;
+	amazon->scaleEmployees(10, 1);
+	amazon->showEmployees();
+
+
+	return 0;
+}

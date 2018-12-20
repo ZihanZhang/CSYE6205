@@ -1,0 +1,57 @@
+/*
+ * BaseCompany.cpp
+ *
+ *  Created on: 2018年11月6日
+ *      Author: zihan
+ */
+
+#include "BaseCompany.h"
+#include <cstring>
+#include "istream"
+
+namespace edu {
+namespace neu {
+namespace csye6205 {
+
+BaseCompany::BaseCompany() {
+	// TODO Auto-generated constructor stub
+
+}
+
+BaseCompany::~BaseCompany() {
+	// TODO Auto-generated destructor stub
+}
+
+void BaseCompany::loadEmployees(vector<string> csvData) {
+	string lineBuffer;
+	ifstream inputStream(csvData);
+	const char * delimiter = ",";
+	while (getline(inputStream, lineBuffer)) {
+
+	}
+}
+void BaseCompany::scaleEmployees(double offset, double scale) {
+
+}
+void BaseCompany::sortEmployees() {
+
+}
+void BaseCompany::showEmployees() {
+
+}
+void BaseCompany::loadItems(vector<string> csvData) {
+
+}
+void BaseCompany::scaleItems(double offset, double scale) {
+
+}
+void BaseCompany::sortItems() {
+
+}
+void BaseCompany::showItems() {
+
+}
+
+} /* namespace csye6205 */
+} /* namespace neu */
+} /* namespace edu */
